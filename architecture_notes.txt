@@ -1,0 +1,24 @@
+Decision: Ordering/payment is only possible at time of pick-up
+Reason: The time between order and pickup is problematic, since there is limited storage in the fridge. We assume it is difficult to mandate a pick up time. The worst case is that there is a significant time between order and pick-up, making inventory space unavailable for other consumers and restocking. To simplify things, we do not allow for scheduled or advanced ordering.
+
+Decision: Point of sale is always connected.
+Reason: An offline point of sale system makes it difficult to verify promotional pricing and coupons. While it is possible using bar codes, there is risk of fraud and exceeding forecasts (i.e. if promotion is net loss). With an always connected POS, it is easier to understand revenue / margin and be able to adjust pricing to optimize inventory (i.e. end of day sale).
+
+Decision: Forecasting inventory is important.
+Reason: Due to limited storage and also perishable nature of goods, it is important to be able to forecast future demand to optimize the inventory supply schedule.
+
+Decision: AWS Elastic Beanstalk
+Reason: Easy to begin with, impossible to outgrow
+
+1.	timesaving server configuration, 
+2.	powerful customization, 
+3.	cost-effective price point. 
+4.	Elastic Beanstalk automates the setup, configuration, and provisioning of other AWS services like EC2, RDS, and Elastic Load Balancing to create a web service.
+5.	AWS Elastic Beanstalk is an easy-to-use service for deploying and scaling web applications and services developed with Java, .NET, PHP, Node.js, Python, Ruby, Go, and Docker on familiar servers such as Apache, Nginx, Passenger, and IIS. 
+6.	Complete resource control, you have the freedom to select the AWS resources, such as Amazon EC2 instance type, that are optimal for your application.
+7.	Security: New AWS security groups and policies are created, along with permissions for these services to securely talk to each other. All the servers are configured so they can only talk to and have permissions for what they need. 
+8.	Monitoring: Basic monitoring of your servers through Cloudwatch.
+9.	Deployment: Easy deployment of new versions through AWS CLI. Once configured, you run `eb deploy` from the root of your git repository, and the deploy just works.
+
+Decision: PostgreSQL
+Reason: PostgreSQL comes with many features aimed to help developers build applications, administrators to protect data integrity and build fault-tolerant environments, and help you manage your data no matter how big or small the dataset. In addition to being free and open source, PostgreSQL is highly extensible.
